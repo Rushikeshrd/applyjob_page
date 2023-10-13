@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./job.jpg");
+  background-position: center;
+  background-size: 100%;
+  backdrop-filter: blur(5px);
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply_box {
+  max-width: 600px;
+  padding: 20px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+  border-radius: 10px;
+}
+
+.apply_box h1{
+  text-align: center;
+}
+
+.form_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+
+.area_control {
+  grid-column: 1 / span 2;
+}
+
+.area_control textarea {
+  width: 100%;
+}
+@media (max-width: 460px) {
+  .area_control {
+    grid-column: 1 / span 1;
+  }
+}
+label {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+input,
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+input:focus {
+  outline-color: rgba(202, 106, 106, 0.644);
+}
+
+.btn_container {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: rgba(248, 9, 9, 0.767);
+  border: transparent solid 2px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s ease-in;
+}
+
+button:hover {
+  background-color: #ccc;
+  border: 2px solid rgba(0, 0, 0, 0.385);
+  color: black;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
